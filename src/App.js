@@ -4,6 +4,8 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Result from './components/Result';
 
+//1 commit
+
 function App() {
 
   const [search, setSearch] = useState('');
@@ -59,7 +61,7 @@ function App() {
               <option name="mediaType" value="podcast">Podcasts</option>
               <option name="mediaType" value="movie">Movies</option>
               <option name="mediaType" value="musicVideo">Music Videos</option>
-              <option name="mediaType">Audiobooks</option>
+              <option name="mediaType" value="audiobook">Audiobooks</option>
               <option name="mediaType" value="shortFilm">Short Films</option>
               <option name="mediaType" value="tvShow">TV Shows</option>
               <option name="mediaType" value="software">Software</option>
