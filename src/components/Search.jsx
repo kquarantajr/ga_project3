@@ -6,7 +6,7 @@ import Option from './Option';
 const Search = (props) => {
 
   const [entityArray, setEntityArray] = useState(['allArtist','movie', 'album','podcast','musicVideo','audiobook','tvSeason','allTrack']);
-  const [attributeArray, setAttributeArray] = useState(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','keywordsTerm','descriptionTerm','authorTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
+  const [attributeArray, setAttributeArray] = useState(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','keywordsTerm','authorTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
   
 
   const handleFields = (event) => {
@@ -14,7 +14,7 @@ const Search = (props) => {
     switch(event.target.value){
       default:
         setEntityArray(['movie', 'album', 'allArtist','podcast','musicVideo','audiobook','tvSeason','allTrack']);
-        setAttributeArray(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','shortFilmTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','keywordsTerm','descriptionTerm','authorTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
+        setAttributeArray(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','shortFilmTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','keywordsTerm','authorTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
         break;
       case 'music':
         setEntityArray(['musicArtist','musicTrack','album','musicVideo','song']);
@@ -22,11 +22,11 @@ const Search = (props) => {
         break;
       case 'podcast':
         setEntityArray(['podcastAuth','podcast']);
-        setAttributeArray(['titleTerm','languageTerm','authorTerm','artistTerm','keywordsTerm','descriptionTerm'])
+        setAttributeArray(['titleTerm','languageTerm','authorTerm','artistTerm','keywordsTerm'])
         break;
       case 'movie':
         setEntityArray(['movieArtist','movie']);
-        setAttributeArray(['actorTerm','artistTerm','shortFilmTerm','producerTerm','ratingTerm','directorTerm','releaseYearTerm','featureFilmTerm','movieArtistTerm','movieTerm','descriptionTerm']);
+        setAttributeArray(['actorTerm','artistTerm','shortFilmTerm','producerTerm','ratingTerm','directorTerm','releaseYearTerm','featureFilmTerm','movieArtistTerm','movieTerm']);
         break;
       case 'musicVideo':
         setEntityArray(['musicArtist', 'musicVideo']);
@@ -38,11 +38,11 @@ const Search = (props) => {
     //     break;
     //   case 'shortFilm':
     //     setEntityArray(['shortFilmArtist','shortFilm']);
-    //     setAttributeArray(['artistTerm','shortFilmTerm','descriptionTerm']);
+    //     setAttributeArray(['artistTerm','shortFilmTerm']);
     //     break;
       case 'tvShow':
         setEntityArray(['tvEpisode','tvSeason']);
-        setAttributeArray(['tvEpisodeTerm','showTerm','tvSeasonTerm','descriptionTerm']);
+        setAttributeArray(['tvEpisodeTerm','showTerm','tvSeasonTerm']);
         break;
     //   case 'software':
     //     setEntityArray(['software', 'iPadSoftware', 'macSoftware']);
