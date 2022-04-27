@@ -1,6 +1,5 @@
 import '../styles/Search.css';
-import axios from 'axios';
-import React, { useState , useEffect } from 'react';
+import React, { useState } from 'react';
 import Option from './Option';
 
 
@@ -33,10 +32,10 @@ const Search = (props) => {
         setEntityArray(['musicArtist', 'musicVideo']);
         setAttributeArray(['albumTerm','ratingIndex','songTerm']);
         break;
-      case 'audiobook':
-        setEntityArray(['audiobookAuthor','audiobook']);
-        setAttributeArray(['titleTerm','authorTerm','ratingIndex']);
-        break;
+    //   case 'audiobook':
+    //     setEntityArray(['audiobookAuthor','audiobook']);
+    //     setAttributeArray(['titleTerm','authorTerm','ratingIndex']);
+    //     break;
     //   case 'shortFilm':
     //     setEntityArray(['shortFilmArtist','shortFilm']);
     //     setAttributeArray(['artistTerm','shortFilmTerm','ratingIndex','descriptionTerm']);
@@ -69,7 +68,7 @@ const Search = (props) => {
                             <option name="mediaType" value="podcast">Podcast</option>
                             <option name="mediaType" value="movie">Movie</option>
                             <option name="mediaType" value="musicVideo">Music Video</option>
-                            <option name="mediaType" value="audiobook">Audiobook</option>
+                            {/* <option name="mediaType" value="audiobook">Audiobook</option> */}
                             {/* <option name="mediaType" value="shortFilm">Short Film</option> */}
                             <option name="mediaType" value="tvShow">TV Show</option>
                             {/* <option name="mediaType" value="software">Software</option> */}
