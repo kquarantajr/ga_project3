@@ -8,6 +8,17 @@
     margin: 1em auto;
 }
 
+h3 {
+    text-align: left;
+    margin-left: 1em;
+}
+
 .resultsContainer {
-    display: inline;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 1em 2em;
 }

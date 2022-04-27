@@ -39,7 +39,7 @@ option{
     text-align: center;
 }
 
-#entityField {
+#entityField, #attributeField {
     margin-top: 0.6em;
     margin-left: 4em;
 }
