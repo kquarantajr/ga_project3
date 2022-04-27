@@ -7,7 +7,7 @@ import Option from './Option';
 const Search = (props) => {
 
   const [entityArray, setEntityArray] = useState(['allArtist','movie', 'album','podcast','musicVideo','mix','audiobook','tvSeason','allTrack']);
-  const [attributeArray, setAttributeArray] = useState(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','shortFilmTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','ratingIndex','keywordsTerm','descriptionTerm','authorTerm','mixTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
+  const [attributeArray, setAttributeArray] = useState(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','ratingIndex','keywordsTerm','descriptionTerm','authorTerm','mixTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
   
 
   const handleFields = (event) => {
@@ -37,10 +37,10 @@ const Search = (props) => {
         setEntityArray(['audiobookAuthor','audiobook']);
         setAttributeArray(['titleTerm','authorTerm','ratingIndex']);
         break;
-      case 'shortFilm':
-        setEntityArray(['shortFilmArtist','shortFilm']);
-        setAttributeArray(['artistTerm','shortFilmTerm','ratingIndex','descriptionTerm']);
-        break;
+    //   case 'shortFilm':
+    //     setEntityArray(['shortFilmArtist','shortFilm']);
+    //     setAttributeArray(['artistTerm','shortFilmTerm','ratingIndex','descriptionTerm']);
+    //     break;
       case 'tvShow':
         setEntityArray(['tvEpisode','tvSeason']);
         setAttributeArray(['tvEpisodeTerm','showTerm','tvSeasonTerm','ratingIndex','descriptionTerm']);
@@ -70,7 +70,7 @@ const Search = (props) => {
                             <option name="mediaType" value="movie">Movie</option>
                             <option name="mediaType" value="musicVideo">Music Video</option>
                             <option name="mediaType" value="audiobook">Audiobook</option>
-                            <option name="mediaType" value="shortFilm">Short Film</option>
+                            {/* <option name="mediaType" value="shortFilm">Short Film</option> */}
                             <option name="mediaType" value="tvShow">TV Show</option>
                             {/* <option name="mediaType" value="software">Software</option> */}
                             {/* <option name="mediaType" value="ebook">eBook</option> */}
