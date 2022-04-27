@@ -45,10 +45,10 @@ const Search = (props) => {
         setEntityArray(['tvEpisode','tvSeason']);
         setAttributeArray(['genreIndex','tvEpisodeTerm','showTerm','tvSeasonTerm','ratingIndex','descriptionTerm']);
         break;
-      case 'software':
-        setEntityArray(['software', 'iPadSoftware', 'macSoftware']);
-        setAttributeArray(['softwareDeveloper']);
-        break;
+    //   case 'software':
+    //     setEntityArray(['software', 'iPadSoftware', 'macSoftware']);
+    //     setAttributeArray(['softwareDeveloper']);
+    //     break;
     //   case 'ebook':
     //     setEntityArray(['ebook']);
     //     setAttributeArray([]);
@@ -72,7 +72,7 @@ const Search = (props) => {
                             <option name="mediaType" value="audiobook">Audiobook</option>
                             <option name="mediaType" value="shortFilm">Short Film</option>
                             <option name="mediaType" value="tvShow">TV Show</option>
-                            <option name="mediaType" value="software">Software</option>
+                            {/* <option name="mediaType" value="software">Software</option> */}
                             {/* <option name="mediaType" value="ebook">eBook</option> */}
                         </select>
                     </div>
