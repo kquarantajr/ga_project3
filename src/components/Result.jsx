@@ -9,7 +9,7 @@ const Result = (props) => {
             <h4>{props.object.collectionName ? props.object.collectionName : <></>}</h4>
             <p style={{fontFamily: "serif"}}>{props.object.artistName}</p>
             <p style={{color: "grey"}}>{props.object.primaryGenreName}</p>
-            <div style={{backgroundColor: "black", color: "white", maxWidth: "60px", width: "40%", margin: "0 auto"}}>{props.object.contentAdvisoryRating ? props.object.contentAdvisoryRating : <div></div>}</div>
+            <div style={{backgroundColor: "black", color: "white", maxWidth: "60px", width: "40%", margin: "0 auto", fontSize: "0.6em"}}>{props.object.contentAdvisoryRating ? props.object.contentAdvisoryRating : <div></div>}</div>
             {/* <p>{props.object.releaseDate ? props.object.releaseDate : <div></div>}</p> */}
         </div>
     )

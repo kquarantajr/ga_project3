@@ -56,7 +56,10 @@ const Search = (props) => {
   }
     return(
         <div className="searchBody">
-            <h1>iTunes Search</h1>
+            <header>
+                <h1>iTunes Search</h1>
+                <p>via the <a target="_blank" href="https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/">iTunes Search API</a></p>
+            </header>
             <div>
                 <fieldset>
                     <legend><b>Search Terms:</b></legend>
@@ -109,7 +112,6 @@ const Search = (props) => {
                 </div>
                 <button onClick={props.handleClick}>Show Results</button>
             </div>
-            <p>via the <a target="_blank" href="https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/">iTunes Search API</a></p>
         </div>
     )
 }
