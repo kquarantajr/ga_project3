@@ -9,8 +9,5 @@
 }
 
 .resultsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-content: space-between;
+    display: inline;
 }

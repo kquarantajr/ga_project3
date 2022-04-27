@@ -13,7 +13,7 @@ const App = () => {
   const [limit, setLimit] = useState(50);
   const [mediaType, setMediaType] = useState('all');
   const [entityType, setEntityType] = useState('allArtist');
-  // const [attributeType, setAttributeType] = useState(['allArtistTerm']);
+  const [attributeType, setAttributeType] = useState(['allArtistTerm']);
   
   const handleSearch = (event) => {
     setSearch(event.target.value)
@@ -31,10 +31,10 @@ const App = () => {
     setEntityType(entityLowerCase);
   }
 
-  // const handleAttributeType = (event) => {
-  //   const attributeLowerCase = event.target.value;
-  //   setAttributeType(attributeLowerCase);
-  // }
+  const handleAttributeType = (event) => {
+    const attributeLowerCase = event.target.value;
+    setAttributeType(attributeLowerCase);
+  }
 
   const handleExplicit = (event) => {
     setExplicit(event.target.value);
@@ -53,8 +53,8 @@ const App = () => {
 
   return (
     <div className="App">
-     { bool ? <Search handleClick={handleClick} search={search} handleSearch={handleSearch} explicit={explicit} handleExplicit={handleExplicit} limit={limit} handleLimit={handleLimit} mediaType={mediaType} handleMediaType={handleMediaType} entityType={entityType} handleEntityType={handleEntityType}/>
-     : <Results handleClick={handleClick} search={search} handleSearch={handleSearch} explicit={explicit} handleExplicit={handleExplicit} limit={limit} handleLimit={handleLimit} mediaType={mediaType} handleMediaType={handleMediaType} entityType={entityType} handleEntityType={handleEntityType} /> }
+     { bool ? <Search handleClick={handleClick} search={search} handleSearch={handleSearch} explicit={explicit} handleExplicit={handleExplicit} limit={limit} handleLimit={handleLimit} mediaType={mediaType} handleMediaType={handleMediaType} entityType={entityType} handleEntityType={handleEntityType} attributeType={attributeType} handleAttributeType={handleAttributeType}/>
+     : <Results handleClick={handleClick} search={search} handleSearch={handleSearch} explicit={explicit} handleExplicit={handleExplicit} limit={limit} handleLimit={handleLimit} mediaType={mediaType} handleMediaType={handleMediaType} entityType={entityType} handleEntityType={handleEntityType} attributeType={attributeType} handleAttributeType={handleAttributeType} /> }
     </div>
   );
 }
