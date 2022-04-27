@@ -54,7 +54,6 @@ const Search = (props) => {
         break;
     }
   }
-
     return(
         <div className="searchBody">
             <h1>iTunes Search</h1>

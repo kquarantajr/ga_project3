@@ -25,7 +25,7 @@ const Results = (props) => {
     return(
         <div className="resultsPage">
             <button onClick={props.handleClick}>Back to Search</button>
-            <h3>{numResults ? `${numResults} Results` : `Loading...`}</h3>
+            <h3>{numResults===0 ? `${numResults} Results` : `No results for this search`}</h3>  
             <div className="resultsContainer">
                 {dataArray.map((object, index) => (
                     <Result key={object.artistID} object={object}/>
