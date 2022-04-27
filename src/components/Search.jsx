@@ -76,7 +76,7 @@ const Search = (props) => {
                         </select>
                     </div>
                     <div className="inputField" id="entityField">
-                        <label htmlFor="entityType">Entity Type: </label>
+                        <label htmlFor="entityType">Type Returned: </label>
                         <select id="entityType" name="entityType"  style={{minWidth: "150px"}} onChange={(event) => {props.handleEntityType(event)}}>
                             {entityArray.map((element, index) => (
                                 <Option key={index} element={element} />
@@ -84,7 +84,7 @@ const Search = (props) => {
                         </select>
                     </div>
                     <div className="inputField" id="attributeField">
-                        <label hmtlFor="attributeType" >Attribute Type: </label>
+                        <label hmtlFor="attributeType" >Search By: </label>
                         <select id="attributeType" name="attributeType" onChange={(event) => {props.handleAttributeType(event)}}>
                             {attributeArray.map((element, index) => (
                                 <Option key={index} element={element} />
@@ -109,6 +109,7 @@ const Search = (props) => {
                 </div>
                 <button onClick={props.handleClick}>Show Results</button>
             </div>
+            <p>via the <a target="_blank" href="https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/">iTunes Search API</a></p>
         </div>
     )
 }
