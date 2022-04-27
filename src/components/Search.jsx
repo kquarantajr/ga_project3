@@ -7,7 +7,7 @@ import Option from './Option';
 const Search = (props) => {
 
   const [entityArray, setEntityArray] = useState(['allArtist','movie', 'album','podcast','musicVideo','mix','audiobook','tvSeason','allTrack']);
-  const [attributeArray, setAttributeArray] = useState(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','shortFilmTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','ratingIndex','keywordsTerm','descriptionTerm','authorTerm','genreIndex','mixTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
+  const [attributeArray, setAttributeArray] = useState(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','shortFilmTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','ratingIndex','keywordsTerm','descriptionTerm','authorTerm','mixTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
   
 
   const handleFields = (event) => {
@@ -15,35 +15,35 @@ const Search = (props) => {
     switch(event.target.value){
       default:
         setEntityArray(['movie', 'album', 'allArtist','podcast','musicVideo','mix','audiobook','tvSeason','allTrack']);
-        setAttributeArray(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','shortFilmTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','ratingIndex','keywordsTerm','descriptionTerm','authorTerm','genreIndex','mixTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
+        setAttributeArray(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','shortFilmTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','ratingIndex','keywordsTerm','descriptionTerm','authorTerm','mixTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
         break;
       case 'music':
         setEntityArray(['musicArtist','musicTrack','album','musicVideo','mix','song']);
-        setAttributeArray(['mixTerm','genreIndex','artistTerm','composerTerm','albumTerm','ratingIndex','songTerm']);
+        setAttributeArray(['mixTerm','artistTerm','composerTerm','albumTerm','ratingIndex','songTerm']);
         break;
       case 'podcast':
         setEntityArray(['podcastAuth','podcast']);
-        setAttributeArray(['titleTerm','languageTerm','authorTerm','genreIndex','artistTerm','ratingIndex','keywordsTerm','descriptionTerm'])
+        setAttributeArray(['titleTerm','languageTerm','authorTerm','artistTerm','ratingIndex','keywordsTerm','descriptionTerm'])
         break;
       case 'movie':
         setEntityArray(['movieArtist','movie']);
-        setAttributeArray(['actorTerm','genreIndex','artistTerm','shortFilmTerm','producerTerm','ratingTerm','directorTerm','releaseYearTerm','featureFilmTerm','movieArtistTerm','movieTerm','ratingIndex','descriptionTerm']);
+        setAttributeArray(['actorTerm','artistTerm','shortFilmTerm','producerTerm','ratingTerm','directorTerm','releaseYearTerm','featureFilmTerm','movieArtistTerm','movieTerm','ratingIndex','descriptionTerm']);
         break;
       case 'musicVideo':
         setEntityArray(['musicArtist', 'musicVideo']);
-        setAttributeArray(['genreIndex','albumTerm','ratingIndex','songTerm']);
+        setAttributeArray(['albumTerm','ratingIndex','songTerm']);
         break;
       case 'audiobook':
         setEntityArray(['audiobookAuthor','audiobook']);
-        setAttributeArray(['titleTerm','authorTerm','genreIndex','ratingIndex']);
+        setAttributeArray(['titleTerm','authorTerm','ratingIndex']);
         break;
       case 'shortFilm':
         setEntityArray(['shortFilmArtist','shortFilm']);
-        setAttributeArray(['genreIndex','artistTerm','shortFilmTerm','ratingIndex','descriptionTerm']);
+        setAttributeArray(['artistTerm','shortFilmTerm','ratingIndex','descriptionTerm']);
         break;
       case 'tvShow':
         setEntityArray(['tvEpisode','tvSeason']);
-        setAttributeArray(['genreIndex','tvEpisodeTerm','showTerm','tvSeasonTerm','ratingIndex','descriptionTerm']);
+        setAttributeArray(['tvEpisodeTerm','showTerm','tvSeasonTerm','ratingIndex','descriptionTerm']);
         break;
     //   case 'software':
     //     setEntityArray(['software', 'iPadSoftware', 'macSoftware']);
