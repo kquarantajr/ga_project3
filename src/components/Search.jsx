@@ -5,20 +5,20 @@ import Option from './Option';
 
 const Search = (props) => {
 
-  const [entityArray, setEntityArray] = useState(['allArtist','movie', 'album','podcast','musicVideo','mix','audiobook','tvSeason','allTrack']);
-  const [attributeArray, setAttributeArray] = useState(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','keywordsTerm','descriptionTerm','authorTerm','mixTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
+  const [entityArray, setEntityArray] = useState(['allArtist','movie', 'album','podcast','musicVideo','audiobook','tvSeason','allTrack']);
+  const [attributeArray, setAttributeArray] = useState(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','keywordsTerm','descriptionTerm','authorTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
   
 
   const handleFields = (event) => {
     props.handleMediaType(event);
     switch(event.target.value){
       default:
-        setEntityArray(['movie', 'album', 'allArtist','podcast','musicVideo','mix','audiobook','tvSeason','allTrack']);
-        setAttributeArray(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','shortFilmTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','keywordsTerm','descriptionTerm','authorTerm','mixTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
+        setEntityArray(['movie', 'album', 'allArtist','podcast','musicVideo','audiobook','tvSeason','allTrack']);
+        setAttributeArray(['actorTerm','languageTerm','allArtistTerm','tvEpisodeTerm','shortFilmTerm','directorTerm','releaseYearTerm','titleTerm','featureFilmTerm','keywordsTerm','descriptionTerm','authorTerm','allTrackTerm','artistTerm','composerTerm','tvSeasonTerm','producerTerm','ratingTerm','songTerm','movieArtistTerm','showTerm','movieTerm','albumTerm']);
         break;
       case 'music':
-        setEntityArray(['musicArtist','musicTrack','album','musicVideo','mix','song']);
-        setAttributeArray(['mixTerm','artistTerm','composerTerm','albumTerm','songTerm']);
+        setEntityArray(['musicArtist','musicTrack','album','musicVideo','song']);
+        setAttributeArray(['artistTerm','composerTerm','albumTerm','songTerm']);
         break;
       case 'podcast':
         setEntityArray(['podcastAuth','podcast']);
