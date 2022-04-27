@@ -9,7 +9,7 @@ const App = () => {
   const [bool, setBool] = useState(true);
 
   const [search, setSearch] = useState('');
-  const [explicit, setExplicit] = useState([false]);
+  const [explicit, setExplicit] = useState(['yes']);
   const [limit, setLimit] = useState(50);
   const [mediaType, setMediaType] = useState('all');
   const [entityType, setEntityType] = useState('allArtist');
