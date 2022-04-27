@@ -16,7 +16,7 @@ h1 {
 }
 
 fieldset {
-    padding: 1em 3em 1em 10em;
+    padding: 1em 3em;
 }
 
 legend b {
@@ -41,8 +41,8 @@ option{
 
 #entityField, #attributeField {
     margin-top: 0.6em;
-    margin-right: 10em;
-    text-align: right;
+    margin-left: 4em;
+    text-align: left;
 }
 
 .searchInput {

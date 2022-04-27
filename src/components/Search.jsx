@@ -49,9 +49,10 @@ const Search = (props) => {
         setEntityArray(['software', 'iPadSoftware', 'macSoftware']);
         setAttributeArray(['softwareDeveloper']);
         break;
-      case 'ebook':
-        setEntityArray(['ebook'])
-        break;
+    //   case 'ebook':
+    //     setEntityArray(['ebook']);
+    //     setAttributeArray([]);
+    //     break;
     }
   }
     return(
@@ -65,14 +66,14 @@ const Search = (props) => {
                         <select id="mediaType" onChange={(event) => handleFields(event)}>
                             <option name="mediaType" value="all">All</option>
                             <option name="mediaType" value="music">Music</option>
-                            <option name="mediaType" value="podcast">Podcasts</option>
-                            <option name="mediaType" value="movie">Movies</option>
-                            <option name="mediaType" value="musicVideo">Music Videos</option>
-                            <option name="mediaType" value="audiobook">Audiobooks</option>
-                            <option name="mediaType" value="shortFilm">Short Films</option>
-                            <option name="mediaType" value="tvShow">TV Shows</option>
+                            <option name="mediaType" value="podcast">Podcast</option>
+                            <option name="mediaType" value="movie">Movie</option>
+                            <option name="mediaType" value="musicVideo">Music Video</option>
+                            <option name="mediaType" value="audiobook">Audiobook</option>
+                            <option name="mediaType" value="shortFilm">Short Film</option>
+                            <option name="mediaType" value="tvShow">TV Show</option>
                             <option name="mediaType" value="software">Software</option>
-                            <option name="mediaType" value="ebook">eBooks</option>
+                            {/* <option name="mediaType" value="ebook">eBook</option> */}
                         </select>
                     </div>
                     <div className="inputField" id="entityField">
