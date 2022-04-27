@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.resultsPage {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.resultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: space-between;
+}

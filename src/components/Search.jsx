@@ -1,3 +1,4 @@
+import '../styles/Search.css';
 import axios from 'axios';
 import React, { useState , useEffect } from 'react';
 import Option from './Option';
@@ -11,7 +12,6 @@ const Search = (props) => {
 
   const handleFields = (event) => {
     props.handleMediaType(event);
-
     switch(event.target.value){
       default:
         setEntityArray(['movie', 'album', 'allArtist','podcast','musicVideo','mix','audiobook','tvSeason','allTrack']);
@@ -56,42 +56,53 @@ const Search = (props) => {
   }
 
     return(
-        <div>
+        <div className="searchBody">
             <h1>iTunes Search</h1>
             <div>
-                <label htmlFor="mediaType">Media Type</label>
-                <select id="mediaType" onChange={(event) => handleFields(event)}>
-                    <option name="mediaType" value="all">All</option>
-                    <option name="mediaType" value="music">Music</option>
-                    <option name="mediaType" value="podcast">Podcasts</option>
-                    <option name="mediaType" value="movie">Movies</option>
-                    <option name="mediaType" value="musicVideo">Music Videos</option>
-                    <option name="mediaType" value="audiobook">Audiobooks</option>
-                    <option name="mediaType" value="shortFilm">Short Films</option>
-                    <option name="mediaType" value="tvShow">TV Shows</option>
-                    <option name="mediaType" value="software">Software</option>
-                    <option name="mediaType" value="ebook">eBooks</option>
-                </select>
-                <label htmlFor="entityType">Entity Type: </label>
-                <select id="entityType" name="entityType" onChange={(event) => {props.handleEntityType(event)}}>
-                    {entityArray.map((element, index) => (
-                        <Option key={index} element={element} />
-                    ))}
-                </select>
+                <fieldset>
+                    <legend><b>Search Terms:</b></legend>
+                    <div className="inputField">
+                        <label htmlFor="mediaType">Media Type: </label>
+                        <select id="mediaType" onChange={(event) => handleFields(event)}>
+                            <option name="mediaType" value="all">All</option>
+                            <option name="mediaType" value="music">Music</option>
+                            <option name="mediaType" value="podcast">Podcasts</option>
+                            <option name="mediaType" value="movie">Movies</option>
+                            <option name="mediaType" value="musicVideo">Music Videos</option>
+                            <option name="mediaType" value="audiobook">Audiobooks</option>
+                            <option name="mediaType" value="shortFilm">Short Films</option>
+                            <option name="mediaType" value="tvShow">TV Shows</option>
+                            <option name="mediaType" value="software">Software</option>
+                            <option name="mediaType" value="ebook">eBooks</option>
+                        </select>
+                    </div>
+                    <div className="inputField" id="entityField">
+                        <label htmlFor="entityType">Entity Type: </label>
+                        <select id="entityType" name="entityType"  style={{minWidth: "150px"}} onChange={(event) => {props.handleEntityType(event)}}>
+                            {entityArray.map((element, index) => (
+                                <Option key={index} element={element} />
+                            ))}
+                        </select>
+                    </div>
                 {/* <label hmtlFor="attributeType">Attribute Type: </label>
                 <select id="attributeType" name="attributeType" onChange={(event) => {props.handleAttributeType(event)}}>
                     {attributeArray.map((element, index) => (
                         <Option key={index} element={element} />
                     ))}
                 </select> */}
-                <label htmlFor="limitInput">Limit</label>
-                <input id="limitInput" name="limitInput"type="number" min="1" max="200" style={{maxWidth: "30px"}}onChange={(event) => {props.handleLimit(event)}} />
-                <label htmlFor="explicitInput">Include Explicit?</label>
-                <select id="explicitInput" name="explicitInput" onChange={(event) => props.handleExplicit(event)}>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-                <div>
+                    <div className="inputField">
+                        <label htmlFor="limitInput">Limit # of Results (from 1 to 250): </label>
+                        <input id="limitInput" name="limitInput"type="number" min="1" max="200" placeholder="50" style={{minWidth: "40px", maxWidth: "50px"}} onChange={(event) => {props.handleLimit(event)}} />
+                    </div>
+                    <div className="inputField">
+                        <label htmlFor="explicitInput">Include Explicit?</label>
+                        <select id="explicitInput" name="explicitInput" onChange={(event) => props.handleExplicit(event)}>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <div className="searchInput">
                     <label htmlFor="searchInput">Search: </label>
                     <input id="searchInput" name="searchInput" type="text" onChange={(event) => {props.handleSearch(event)}}/>
                 </div>

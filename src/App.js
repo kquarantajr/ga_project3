@@ -42,8 +42,7 @@ const App = () => {
   }
 
   const handleLimit = (event) => {
-    let numToString = event.target.value.toString();
-    setLimit(numToString);
+    setLimit(event.target.value);
     console.log("Limit: " + event.target.value);
   }
 

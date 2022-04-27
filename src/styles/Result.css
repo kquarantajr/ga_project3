@@ -4,5 +4,7 @@
 }
 
 .unitContainer {
-    margin: 1em;
+    margin: 2em 1em 2em 1em;
+    display: inline;
+    max-width: 200px;
 }
