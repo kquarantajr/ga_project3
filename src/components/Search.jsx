@@ -78,12 +78,12 @@ const Search = (props) => {
                         <Option key={index} element={element} />
                     ))}
                 </select>
-                <label hmtlFor="attributeType">Attribute Type: </label>
+                {/* <label hmtlFor="attributeType">Attribute Type: </label>
                 <select id="attributeType" name="attributeType" onChange={(event) => {props.handleAttributeType(event)}}>
                     {attributeArray.map((element, index) => (
                         <Option key={index} element={element} />
                     ))}
-                </select>
+                </select> */}
                 <label htmlFor="limitInput">Limit</label>
                 <input id="limitInput" name="limitInput"type="number" min="1" max="200" style={{maxWidth: "30px"}}onChange={(event) => {props.handleLimit(event)}} />
                 <label htmlFor="explicitInput">Include Explicit?</label>

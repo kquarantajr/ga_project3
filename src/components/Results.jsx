@@ -7,7 +7,7 @@ const Results = (props) => {
     const [dataArray, setDataArray] = useState([]);
 
     const getData = async () => {
-        const response = await axios.get(`https://itunes.apple.com/search?term=${props.search}&media=${props.mediaType}&entity=${props.entityType}&attribute=${props.attributeType}&explicit=${props.explicit}&limit=${props.limit}&country=us&lang=en_us`);
+        const response = await axios.get(`https://itunes.apple.com/search?term=${props.search}&media=${props.mediaType}&entity=${props.entityType}&explicit=${props.explicit}&limit=${props.limit}&country=us&lang=en_us`);
         console.log(response.data.results);
         setDataArray(response.data.results);
       }
